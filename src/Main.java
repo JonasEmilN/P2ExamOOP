@@ -36,23 +36,71 @@ public class Main {
         Scanner sc = new Scanner(System.in);
         System.out.println("Welcome to OpOp spil \n Enter Number of player (min 2 and max 6 players)");
 
-        int antal;
-        antal = sc.nextInt();
+        int total = sc.nextInt();
 
         //While loot så jeg får den input jeg vil ha.
         int c = 0;
         while (c < 1) {
-            if (antal > 1 && antal < 7) {
-                antal = sc.nextInt();
+            if (total > 1 && total < players.size()) {
+                total = sc.nextInt();
                 c++;
             }
             else {
                 System.out.println("Only numbers 2-6 is allowed");
-                antal = sc.nextInt();
+                total = sc.nextInt();
             }
         }
 
-        
+        for (int i = 0; i < total-1; i++) {
+
+            if (i == 0) {
+                System.out.println("Enter player 1 name");
+                p1.name = sc.nextLine();
+
+                System.out.println("Choose race\n" + Race.races());
+
+                int raceNumber = sc.nextInt();
+                c = 0;
+                while (c < 1) {
+                    if (raceNumber > -1 && raceNumber < Race.races().size()){
+                        //p1.race = Race.races().toString();
+                    }
+                }
+                total = sc.nextInt();
+                c++;
+
+
+            }
+            else if (i == 1){
+                System.out.println("Enter player 2 name");
+                p1.name = sc.nextLine();
+
+            }
+            else if (i == 2){
+                System.out.println("Enter player 3 name");
+                p1.name = sc.nextLine();
+
+            }
+            else if (i == 3){
+                System.out.println("Enter player 4 name");
+                p1.name = sc.nextLine();
+
+            }
+            else if (i == 4){
+                System.out.println("Enter player 5 name");
+                p1.name = sc.nextLine();
+
+            }
+            else if (i == 5){
+                System.out.println("Enter player 6 name");
+                p1.name = sc.nextLine();
+
+            }
+
+
+
+
+        }
 
 
 
@@ -64,9 +112,6 @@ public class Main {
 
 
 
-        System.out.println(Color.colors());
-
-        System.out.println(Race.races());
 
         System.out.println("antal spiller " + players.size());
         System.out.println(players);
