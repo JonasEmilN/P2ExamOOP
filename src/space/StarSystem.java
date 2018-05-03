@@ -19,7 +19,6 @@ public class StarSystem {
     int south;
     int southWest;
     int northWest;
-    String namePlanet;
     int resourcesPlanet;
     int ships;
     int maxPlanet = 4; //Max +1 (hvis max er 3 så skriv 4)
@@ -49,7 +48,8 @@ public class StarSystem {
         return (ArrayList) unitsInSystem;
     }
 
-    public StarSystem(int placement, int neigthbors, int north, int northEast, int southEast, int south, int southWest, int northWest) {
+    public StarSystem(String name, int placement, int neigthbors, int north, int northEast, int southEast, int south, int southWest, int northWest) {
+        this.name = name;
         this.placement = placement;
         this.neigthbors = neigthbors;
         this.north = north;
@@ -62,21 +62,20 @@ public class StarSystem {
 
     @Override
     public String toString() {
-        return "StarSystem{" +
-                "name='" + name + '\'' +
-                ", neigthbors=" + neigthbors +
-                ", namePlanet='" + namePlanet + '\'' +
-                ", Planet in system='" + planets() + '\'' +
-                ", Units in system='" + units() + '\'' +
-                ", resourcesPlanet=" + resourcesPlanet +
-                ", north='" + north + '\'' +
-                ", northEast='" + northEast + '\'' +
-                ", southEast='" + southEast + '\'' +
-                ", south='" + south + '\'' +
-                ", southWest='" + southWest + '\'' +
-                ", northWest='" + northWest + '\'' +
-                ", ships=" + ships +
-                ", maxPlanet=" + maxPlanet +
+        return "\n StarSystem{" +
+                "Placement =\t'" + name + '\'' +
+                ",\t neigthbors=" + neigthbors +
+                ",\t Planet in system='" + planets() + '\'' +
+                ",\t Units in system='" + units() + '\'' +
+                ",\t resourcesPlanet=" + resourcesPlanet +
+                ",\t north='" + north + '\'' +
+                ",\t northEast='" + northEast + '\'' +
+                ",\t southEast='" + southEast + '\'' +
+                ",\t south='" + south + '\'' +
+                ",\t southWest='" + southWest + '\'' +
+                ",\t northWest='" + northWest + '\'' +
+                ",\t ships=" + ships +
+                ",\t maxPlanet=" + maxPlanet +
                 '}';
     }
 
