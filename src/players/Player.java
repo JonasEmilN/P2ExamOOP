@@ -47,7 +47,7 @@ public class Player {
     @Override
     public boolean equals(Object o) {
         if (o != null && o instanceof Player) {
-            if(((Player) o).race.equals(this.race)) {
+            if (((Player) o).race.equals(this.race)) {
                 return true;
             }
 
@@ -60,6 +60,5 @@ public class Player {
 
         return Objects.hash(race);
     }
-
 
 }

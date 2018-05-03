@@ -7,8 +7,6 @@ import java.util.List;
 
 public class Color {
 
-
-
     public static ArrayList colors() {
 
         final List<String> colors = new ArrayList<>();
