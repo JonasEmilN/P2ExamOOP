@@ -7,8 +7,8 @@ import java.util.*;
 public class Player {
 
     int id;
-    String name;
-    String race;    //måske int
+    public String name;
+    public String race;    //måske int
     String color;   //måske int
 
     public Player(int id, String name, Object race, Object color) {

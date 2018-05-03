@@ -16,40 +16,52 @@ public class Main {
 
         Set<Player> players = new HashSet<>();
 
-        Player p1 = new Player(0 ,"Jonas",Race.races().get(1), Color.colors().get(0));
-        Player p2 = new Player(1,"Jeppe", Race.races().get(2),Color.colors().get(1));
-        Player p3 = new Player(2 ,"Jonas",Race.races().get(3), Color.colors().get(2));
-        Player p4 = new Player(3, "Jeppe", Race.races().get(1), Color.colors().get(3));
-
-        int max = 6;
-        int antal = 4;
-        int k = 1;
-
-        for (int c = 0; c < antal; c++){
-
-            Scanner sc = new Scanner(System.in);
-
-            Player play1 = new Player(c,"","",Color.colors().get(c));
-
-            System.out.println("Enter Player 1 Name");
-
-            play1.name = sc.nextLine();
-
-            System.out.println("Chosse Race Player 1\n" + Race.races());
-
-            k.Race
-
-
-
-
-            k++
-
-        }
+        //Hardcode 6 spiller og 1 npc. da jeg ved der max må være 6 deltager.
+        Player p1 = new Player(0,"","",Color.colors().get(0));
+        Player p2 = new Player(1,"","",Color.colors().get(1));
+        Player p3 = new Player(2,"","",Color.colors().get(2));
+        Player p4 = new Player(3,"","",Color.colors().get(3));
+        Player p5 = new Player(4,"","",Color.colors().get(4));
+        Player p6 = new Player(5,"","",Color.colors().get(5));
+        Player npc = new Player(6,"NPC","NPC",Color.colors().get(6));
 
         players.add(p1);
         players.add(p2);
         players.add(p3);
         players.add(p4);
+        players.add(p5);
+        players.add(p6);
+        players.add(npc);
+
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Welcome to OpOp spil \n Enter Number of player (min 2 and max 6 players)");
+
+        int antal;
+        antal = sc.nextInt();
+
+        //While loot så jeg får den input jeg vil ha.
+        int c = 0;
+        while (c < 1) {
+            if (antal > 1 && antal < 7) {
+                antal = sc.nextInt();
+                c++;
+            }
+            else {
+                System.out.println("Only numbers 2-6 is allowed");
+                antal = sc.nextInt();
+            }
+        }
+
+        
+
+
+
+
+
+
+
+
+
 
 
         System.out.println(Color.colors());
