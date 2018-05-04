@@ -9,9 +9,9 @@ import java.util.List;
 
 public class Galaxy {
 
-    public ArrayList starSystem() {
+    List<StarSystem> starSystemInGalaxy = new ArrayList<>();
 
-        List<StarSystem> starSystemInGalaxy = new ArrayList<>();
+    public void randomGalaxy() {
         starSystemInGalaxy.add( new StarSystem("Center",1,6,2,3,
                 4,5,6,7));
 
@@ -33,15 +33,16 @@ public class Galaxy {
         starSystemInGalaxy.add( new StarSystem("South West",7,3,0,2,
                 1,6,0,0));
 
-        return (ArrayList) starSystemInGalaxy;
+
     }
 
-    public Galaxy() {
-        starSystem();
+    public void Galaxy() {
+         randomGalaxy();
     }
+
 
     @Override
     public String toString() {
-        return "Galaxy{" + starSystem() ;
+        return "Galaxy{" + starSystemInGalaxy ;
     }
 }

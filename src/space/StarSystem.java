@@ -2,6 +2,7 @@ package space;
 //Jonas Emil Nielsen
 //Jeni16@student.aau.dk
 
+import units.Carrier;
 import units.Units;
 
 import java.util.ArrayList;
@@ -41,23 +42,27 @@ public class StarSystem {
 
     }
 
-    public ArrayList units() {
+    public List<Units> unitsInSystem = new ArrayList<>();
 
-        List<Units> unitsInSystem = new ArrayList<>();
+    public void addUnit(Object unit) {
 
-        return (ArrayList) unitsInSystem;
+        unitsInSystem.add(unitsInSystem.size(), (Units) unit);
+
     }
 
-    public StarSystem(String name, int placement, int neigthbors, int north, int northEast, int southEast, int south, int southWest, int northWest) {
+
+
+    public StarSystem(String name, int placement, int neighbors, int north, int northEast, int southEast, int south, int southWest, int northWest) {
         this.name = name;
         this.placement = placement;
-        this.neigthbors = neigthbors;
+        this.neigthbors = neighbors;
         this.north = north;
         this.northEast = northEast;
         this.southEast = southEast;
         this.south = south;
         this.southWest = southWest;
         this.northWest = northWest;
+
     }
 
     @Override
@@ -66,7 +71,7 @@ public class StarSystem {
                 "Placement =\t'" + name + '\'' +
                 ",\t neigthbors=" + neigthbors +
                 ",\t Planet in system='" + planets() + '\'' +
-                ",\t Units in system='" + units() + '\'' +
+                ",\t Units in system='" + unitsInSystem + '\'' +
                 ",\t resourcesPlanet=" + resourcesPlanet +
                 ",\t north='" + north + '\'' +
                 ",\t northEast='" + northEast + '\'' +
@@ -79,6 +84,22 @@ public class StarSystem {
                 '}';
     }
 
+    public static void main(String[] args){
+
+        System.out.println("før test");
+
+        StarSystem test1 = new StarSystem("lol",1,1,1,1,1,1,1,1);
+
+        Carrier test2 = new Carrier(0,0);
+
+        test1.unitsInSystem.add(0,test2);
+
+        System.out.println(test1);
+        System.out.println("lol");
+        System.out.println(test2);
+
+
+    }
 
 }
 
