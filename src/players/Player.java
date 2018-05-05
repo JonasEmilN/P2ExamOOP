@@ -7,11 +7,11 @@ import java.util.*;
 public class Player {
 
     int id;
-    public String name;
-    public String race;    //måske int
-    String color;   //måske int
+    private String name;
+    private static String race;
+    private static String color;
 
-    public Player(int id, String name, Object race, Object color) {
+    public Player(int id, String name, String race, String color) {
         this.id = id;
         this.name = name;
         this.race = (String) race;
@@ -27,6 +27,10 @@ public class Player {
     }
 
     public String getRace() {
+
+
+
+
         return race;
     }
 
@@ -60,5 +64,21 @@ public class Player {
 
         return Objects.hash(race);
     }
+
+
+
+    public static void main(String[] args){
+        Race.Race();
+        Color.Color();
+
+
+        System.out.println(Race.races);
+        System.out.println("før remove");
+        Race.races.remove("1");
+        System.out.println(Race.races);
+
+    }
+
+
 
 }
