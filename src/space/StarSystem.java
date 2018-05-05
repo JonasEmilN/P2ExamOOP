@@ -22,25 +22,40 @@ public class StarSystem {
     int northWest;
     int resourcesPlanet;
     int ships;
-    int maxPlanet = 4; //Max +1 (hvis max er 3 så skriv 4)
-    int minPlant = 0;
+    static int maxPlanet = 4; //Max +1 (hvis max er 3 så skriv 4)
+    static int minPlant = 0;
 
-    public ArrayList planets() {
-        Random rpn = new Random();
+    private static List<Planet> planetsInSystem = new ArrayList();
 
-        int p = rpn.nextInt(maxPlanet)+minPlant;
+    static void addPlanets(int plants, String plant1Name, int plant1resource,
+                             String plant2Name, int plant2resource,
+                             String plant3Name, int plant3resource) {
 
-        List<Planet> planetsInSystem = new ArrayList();
+        if (plants == 1) {
+            planetsInSystem.add(new Planet(plant1Name,plant1resource));
+        }
+        else if (plants == 2) {
+            planetsInSystem.add(new Planet(plant1Name,plant1resource));
+            planetsInSystem.add(new Planet(plant2Name,plant2resource));
+        }
+        else if (plants == 3) {
+            planetsInSystem.add(new Planet(plant1Name,plant1resource));
+            planetsInSystem.add(new Planet(plant2Name,plant2resource));
+            planetsInSystem.add(new Planet(plant3Name,plant3resource));
+        }
+        else {
+            Random rpn = new Random();
+            int p = rpn.nextInt(maxPlanet)+minPlant;
 
-        while (p > 0) {
+            for (; p > 0 ; p++) {
+                planetsInSystem.add(new Planet("r",7));
+            }
 
-            planetsInSystem.add(new Planet());
-            p--;
         }
 
-        return (ArrayList) planetsInSystem;
-
     }
+
+
 
     public List<Units> unitsInSystem = new ArrayList<>();
 
@@ -52,7 +67,10 @@ public class StarSystem {
 
 
 
-    public StarSystem(String name, int placement, int neighbors, int north, int northEast, int southEast, int south, int southWest, int northWest) {
+    public StarSystem(String name, int placement, int neighbors, int north, int northEast
+            , int southEast, int south, int southWest, int northWest, int plants
+            , String plant1Name, int plant1resource, String plant2Name
+            , int plant2resource, String plant3Name, int plant3resource) {
         this.name = name;
         this.placement = placement;
         this.neigthbors = neighbors;
@@ -62,6 +80,7 @@ public class StarSystem {
         this.south = south;
         this.southWest = southWest;
         this.northWest = northWest;
+        addPlanets(plants,plant1Name,plant1resource,plant2Name,plant2resource,plant3Name,plant3resource);
 
     }
 
@@ -70,7 +89,7 @@ public class StarSystem {
         return "\n StarSystem{" +
                 "Placement =\t'" + name + '\'' +
                 ",\t neigthbors=" + neigthbors +
-                ",\t Planet in system='" + planets() + '\'' +
+                ",\t Planet in system='" + planetsInSystem + '\'' +
                 ",\t Units in system='" + unitsInSystem + '\'' +
                 ",\t resourcesPlanet=" + resourcesPlanet +
                 ",\t north='" + north + '\'' +
@@ -86,17 +105,21 @@ public class StarSystem {
 
     public static void main(String[] args){
 
+
+
         System.out.println("før test");
 
-        StarSystem test1 = new StarSystem("lol",1,1,1,1,1,1,1,1);
 
-        Carrier test2 = new Carrier(0,0);
 
-        test1.unitsInSystem.add(0,test2);
+
+
+        StarSystem test1 = new StarSystem("lol",1,1,1,1,1,1
+                ,1,1,4,"",1,"",1,"",1);
+
 
         System.out.println(test1);
         System.out.println("lol");
-        System.out.println(test2);
+        System.out.println();
 
 
     }

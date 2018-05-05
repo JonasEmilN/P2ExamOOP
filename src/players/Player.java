@@ -8,13 +8,13 @@ public class Player {
 
     int id;
     public String name;
-    public String race;    //måske int
-    String color;   //måske int
+    public static String race;
+    static String color;
 
     public Player(int id, String name, Object race, Object color) {
         this.id = id;
         this.name = name;
-        this.race = (String) race;
+        this.race =  (String) race;
         this.color = (String) color;
     }
 

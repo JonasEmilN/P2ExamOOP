@@ -11,10 +11,11 @@ public class Planet {
     String name;
     int resources;
     int maxResources = 6;
+    int minResources = 0;
 
-    public static ArrayList planets() {
+    final static List<String> planets = new ArrayList<>();
 
-        final List<String> planets = new ArrayList<>();
+    public static void addPlanetNames() {
 
         planets.add("Velnor");
         planets.add("Mirage");
@@ -25,7 +26,6 @@ public class Planet {
         planets.add("Rigel II");
         planets.add("Industrex");
 
-        return (ArrayList) planets;
     }
 
     public int randomResources() {
@@ -36,13 +36,25 @@ public class Planet {
 
     public int randomPlanet() {
         Random rp = new Random();
-        return rp.nextInt(planets().size());
+        return rp.nextInt(planets.size());
 
     }
 
-    public Planet() {
-        name = (String) planets().get(randomPlanet());
-        resources = randomResources();
+    public Planet(String name, int resources) {
+        Planet.addPlanetNames();
+        if (planets.contains(name)) {
+            this.name = name;
+        }
+        else {
+            this.name = planets.get(randomPlanet());
+        }
+
+        if (resources > minResources-1 && resources < maxResources+1) {
+            this.resources = resources;
+        }
+        else {
+            this.resources = randomResources();
+        }
 
     }
 

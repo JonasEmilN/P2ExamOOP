@@ -7,17 +7,21 @@ import java.util.List;
 
 public class Color {
 
-    public static ArrayList colors() {
+    static final List<String> colors = new ArrayList<>();
 
-        final List<String> colors = new ArrayList<>();
+    public static void addColors() {
+
         colors.add("Red");
         colors.add("Blue");
         colors.add("Green");
         colors.add("Yellow");
         colors.add("Pink");
         colors.add("Cyan");
-        colors.add("Black");;
+        colors.add("Black");
 
-        return (ArrayList) colors;
+    }
+
+    public List<String> getColors() {
+        return colors;
     }
 }
