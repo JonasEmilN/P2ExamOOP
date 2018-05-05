@@ -24,10 +24,6 @@ public class Carrier implements Units {
         this.load = load;
     }
 
-    public void setId(int id) {
-        this.id = id;
-    }
-
     @Override
     public int getResourceCost() {
         return 3;

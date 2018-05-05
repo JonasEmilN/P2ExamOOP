@@ -32,11 +32,12 @@ public class StarSystem {
 
         List<Planet> planetsInSystem = new ArrayList();
 
-        while (p > 0) {
-
+        for (; p < 1; p--) {
             planetsInSystem.add(new Planet());
-            p--;
         }
+
+
+
 
         return (ArrayList) planetsInSystem;
 
@@ -82,6 +83,10 @@ public class StarSystem {
                 ",\t ships=" + ships +
                 ",\t maxPlanet=" + maxPlanet +
                 '}';
+    }
+
+    public List<Units> getUnitsInSystem() {
+        return unitsInSystem;
     }
 
     public static void main(String[] args){

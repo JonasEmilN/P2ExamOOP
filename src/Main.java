@@ -24,12 +24,21 @@ public class Main {
 
         Galaxy test1 = new Galaxy();
 
+        test1.randomGalaxy();
+
+
+
         Carrier test2 = new Carrier(0,0);
 
-        
+        test1.getStarSystemInGalaxy().get(0).unitsInSystem.add(test2);
+
+        test1.getStarSystemInGalaxy().get(0).unitsInSystem.get(1) =
+                test1.getStarSystemInGalaxy().get(0).unitsInSystem.get(0);
+
+
 
         System.out.println(test1);
-        System.out.println(test1);
+        System.out.println();
         System.out.println(test2);
 
 
