@@ -4,16 +4,23 @@ package units;
 
 public class Dreadnought implements Units {
 
-    int resourceCost;
-    int combatValue;
-    int movementSpeed;
-    int capacity;
+    private int playerId;
+    private int resourceCost;
+    private int combatValue;
+    private int movementSpeed;
+    private int capacity;
 
-    public Dreadnought() {
+    public Dreadnought(int playerId) {
         this.resourceCost = getResourceCost();
         this.combatValue = getCombatValue();
         this.movementSpeed = getMovementSpeed();
         this.capacity = getCapacity();
+        this.playerId = playerId;
+    }
+
+    @Override
+    public int getPlayerId() {
+        return playerId;
     }
 
     @Override
@@ -39,7 +46,8 @@ public class Dreadnought implements Units {
     @Override
     public String toString() {
         return "Dreadnought{" +
-                "resourceCost = " + resourceCost +
+                "playerId=" + playerId +
+                ", resourceCost = " + resourceCost +
                 ", combatValue = " + combatValue +
                 ", movementSpeed = " + movementSpeed +
                 ", capacity = " + capacity +

@@ -4,28 +4,30 @@ package units;
 
 public class Carrier implements Units {
 
-    int resourceCost;
-    int combatValue;
-    int movementSpeed;
-    int capacity;
-    int load;
-    int id;
+    private int resourceCost;
+    private int combatValue;
+    private int movementSpeed;
+    private int capacity;
+    private int load;
+    private int playerId;
 
-    public Carrier(int id, int load) {
+    public Carrier(int playerId, int load) {
         this.resourceCost = getResourceCost();
         this.combatValue = getCombatValue();
         this.movementSpeed = getMovementSpeed();
         this.capacity = getCapacity();
         this.load = load;
-        this.id=id;
+        this.playerId=playerId;
     }
 
     public void setLoad(int load) {
         this.load = load;
     }
 
-    public void setId(int id) {
-        this.id = id;
+
+    @Override
+    public int getPlayerId() {
+        return playerId;
     }
 
     @Override
@@ -51,12 +53,12 @@ public class Carrier implements Units {
     @Override
     public String toString() {
         return "Carrier{" +
-                "resourceCost=" + resourceCost +
+                "playerId=" + playerId +
+                ", resourceCost=" + resourceCost +
                 ", combatValue=" + combatValue +
                 ", movementSpeed=" + movementSpeed +
                 ", capacity=" + capacity +
                 ", load=" + load +
-                ", id=" + id +
                 '}';
     }
 }

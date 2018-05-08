@@ -4,6 +4,8 @@ package units;
 
 public interface Units {
 
+    int getPlayerId();
+
     int getResourceCost();
 
     int getCombatValue();

@@ -23,9 +23,10 @@ public class Planet {
         planets.add("Vega Minor");
         planets.add("Vega Major");
         planets.add("Hope's End");
+        planets.add("Rigel I");
         planets.add("Rigel II");
         planets.add("Industrex");
-
+        planets.add("Mecatol Rex");
     }
 
     public int randomResources() {
