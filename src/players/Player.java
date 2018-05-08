@@ -36,12 +36,7 @@ public class Player {
 
     @Override
     public String toString() {
-        return "\n Player{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                ", race='" + race + '\'' +
-                ", color='" + color + '\'' +
-                '}';
+        return "\n Player{" + "id=" + id + ", name='" + name + '\'' + ", race='" + race + '\'' + ", color='" + color + '\'' + '}';
     }
 
     @Override

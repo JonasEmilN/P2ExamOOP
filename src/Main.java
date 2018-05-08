@@ -4,6 +4,7 @@
 
 
 import game.GameSetup;
+import game.LegalGalaxy;
 import space.Galaxy;
 import space.StarSystem;
 import units.Carrier;
@@ -11,26 +12,11 @@ import units.Carrier;
 
 public class Main {
 
-    public void testtest() {
-
-
-
-    }
-
-
     public static void main(String[] args){
 
         System.out.println("før test");
+        LegalGalaxy.LegalGalaxy();
 
-        Galaxy test1 = new Galaxy();
-
-        Carrier test2 = new Carrier(0,0);
-
-        
-
-        System.out.println(test1);
-        System.out.println(test1);
-        System.out.println(test2);
 
 
     }

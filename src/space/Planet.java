@@ -4,16 +4,31 @@ package space;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 import java.util.Random;
 
 public class Planet {
 
-    String name;
+    public String name;
     int resources;
     int maxResources = 6;
     int minResources = 0;
 
     final static List<String> planets = new ArrayList<>();
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Planet planet = (Planet) o;
+        return Objects.equals(name, planet.name);
+    }
+
+    @Override
+    public int hashCode() {
+
+        return Objects.hash(name);
+    }
 
     public static void addPlanetNames() {
 

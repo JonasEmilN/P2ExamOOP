@@ -24,7 +24,6 @@ public class Carrier implements Units {
         this.load = load;
     }
 
-
     @Override
     public int getPlayerId() {
         return playerId;

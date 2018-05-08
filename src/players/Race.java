@@ -7,7 +7,7 @@ import java.util.List;
 
 public class Race {
 
-    final static List<String> races = new ArrayList<>();
+    static List<String> races = new ArrayList<>();
 
     public static void addRaces() {
 
@@ -15,10 +15,14 @@ public class Race {
         races.add("The Clan of Saar");
         races.add("The Emirates of Hacan");
         races.add("The Federation of Sol");
-        races.add("Gay Lords");
-        races.add("Dwarf");
-        races.add("Clan OP Jonas");
+        races.add("Awesome People of 304A");
+        races.add("Space Dwarf");
+        races.add("Energi Drinkers");
 
+    }
+
+    List<String> getRaces() {
+        return races;
     }
 
     @Override

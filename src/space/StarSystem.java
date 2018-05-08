@@ -22,7 +22,7 @@ public class StarSystem {
     private static int maxPlanet = 4; //Max +1 (hvis max er 3 så skriv 4)
     private static int minPlant = 0;
 
-    private List<Planet> planetsInSystem = new ArrayList();
+    public List<Planet> planetsInSystem = new ArrayList();
 
     void addPlanets(int plants, String plant1Name, int plant1resource,
                              String plant2Name, int plant2resource,
