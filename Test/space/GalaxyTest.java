@@ -1,14 +1,8 @@
+//Jonas Emil Nielsen
+//Jeni16@student.aau.dk
 package space;
 
-import org.hamcrest.core.Is;
-import org.hamcrest.core.IsEqual;
 import org.junit.Test;
-import players.Race;
-import units.Destroyer;
-import units.Dreadnought;
-import units.Units;
-
-import static org.junit.Assert.*;
 
 public class GalaxyTest {
 

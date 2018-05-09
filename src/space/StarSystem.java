@@ -1,7 +1,8 @@
-package space;
 //Jonas Emil Nielsen
 //Jeni16@student.aau.dk
+package space;
 
+import units.Units;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -11,14 +12,14 @@ import java.util.Random;
 public class StarSystem {
 
     private String name;
-    private int placement;
+    public int placement;
     private int neigthbors;
-    private int north;
-    private int northEast;
-    private int southEast;
-    private int south;
-    private int southWest;
-    private int northWest;
+    public int north;
+    public int northEast;
+    public int southEast;
+    public int south;
+    public int southWest;
+    public int northWest;
     private static int maxPlanet = 4; //Max +1 (hvis max er 3 så skriv 4)
     private static int minPlant = 0;
 
@@ -63,17 +64,17 @@ public class StarSystem {
 
     }
 
+    HashMap<String, Units> unitsInSystem = new HashMap<>();
 
-    HashMap<String, Object> unitsInSystem = new HashMap<>();
-
+    public HashMap<String, Units> getUnitsInSystem() {
+        return unitsInSystem;
+    }
 
     public void addUnit(String id, Object unit) {
 
-        unitsInSystem.put(id, unit);
+        unitsInSystem.put(id, (Units) unit);
 
     }
-
-
 
     public StarSystem(String name, int placement, int neighbors, int north, int northEast
             , int southEast, int south, int southWest, int northWest, int plants

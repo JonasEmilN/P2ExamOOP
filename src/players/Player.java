@@ -1,6 +1,6 @@
-package players;
 //Jonas Emil Nielsen
 //Jeni16@student.aau.dk
+package players;
 
 import java.util.*;
 

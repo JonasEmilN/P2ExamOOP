@@ -1,6 +1,6 @@
-package units;
 //Jonas Emil Nielsen
 //Jeni16@student.aau.dk
+package units;
 
 public class Destroyer implements Units {
 
@@ -45,8 +45,8 @@ public class Destroyer implements Units {
 
     @Override
     public String toString() {
-        return "Destroyer{" +
-                "playerId=" + playerId +
+        return "\nDestroyer   {\t" +
+                "playerId = " + playerId +
                 ", resourceCost = " + resourceCost +
                 ", combatValue = " + combatValue +
                 ", movementSpeed = " + movementSpeed +

@@ -1,6 +1,6 @@
-package units;
 //Jonas Emil Nielsen
 //Jeni16@student.aau.dk
+package units;
 
 public class Cruiser implements Units {
 
@@ -45,12 +45,12 @@ public class Cruiser implements Units {
 
     @Override
     public String toString() {
-        return "Cruiser{" +
-                "playerId=" + playerId +
-                ", resourceCost=" + resourceCost +
-                ", combatValue=" + combatValue +
-                ", movementSpeed=" + movementSpeed +
-                ", capacity=" + capacity +
+        return "\nCruiser     {\t" +
+                "playerId = " + playerId +
+                ", resourceCost = " + resourceCost +
+                ", combatValue = " + combatValue +
+                ", movementSpeed = " + movementSpeed +
+                ", capacity = " + capacity +
                 '}';
     }
 }

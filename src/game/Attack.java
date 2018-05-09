@@ -1,3 +1,5 @@
+//Jonas Emil Nielsen
+//Jeni16@student.aau.dk
 package game;
 
 import java.util.Random;

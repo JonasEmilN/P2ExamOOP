@@ -1,6 +1,6 @@
-package units;
 //Jonas Emil Nielsen
 //Jeni16@student.aau.dk
+package units;
 
 public class Carrier implements Units {
 
@@ -51,13 +51,13 @@ public class Carrier implements Units {
 
     @Override
     public String toString() {
-        return "Carrier{" +
-                "playerId=" + playerId +
-                ", resourceCost=" + resourceCost +
-                ", combatValue=" + combatValue +
-                ", movementSpeed=" + movementSpeed +
-                ", capacity=" + capacity +
-                ", load=" + load +
+        return "\nCarrier     {\t" +
+                "playerId = " + playerId +
+                ", resourceCost = " + resourceCost +
+                ", combatValue = " + combatValue +
+                ", movementSpeed = " + movementSpeed +
+                ", capacity = " + capacity +
+                ", load = " + load +
                 '}';
     }
 }

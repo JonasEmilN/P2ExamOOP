@@ -1,12 +1,6 @@
-package space;
 //Jonas Emil Nielsen
 //Jeni16@student.aau.dk
-
-import players.Player;
-import units.Carrier;
-import units.Cruiser;
-import units.Destroyer;
-import units.Dreadnought;
+package space;
 
 import java.util.ArrayList;
 import java.util.List;

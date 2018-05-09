@@ -1,6 +1,6 @@
-package units;
 //Jonas Emil Nielsen
 //Jeni16@student.aau.dk
+package units;
 
 public class Dreadnought implements Units {
 
@@ -45,8 +45,8 @@ public class Dreadnought implements Units {
 
     @Override
     public String toString() {
-        return "Dreadnought{" +
-                "playerId=" + playerId +
+        return "\nDreadnought {\t" +
+                "playerId = " + playerId +
                 ", resourceCost = " + resourceCost +
                 ", combatValue = " + combatValue +
                 ", movementSpeed = " + movementSpeed +

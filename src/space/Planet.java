@@ -1,6 +1,6 @@
-package space;
 //Jonas Emil Nielsen
 //Jeni16@student.aau.dk
+package space;
 
 import java.util.ArrayList;
 import java.util.List;

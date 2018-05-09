@@ -1,5 +1,6 @@
+//Jonas Emil Nielsen
+//Jeni16@student.aau.dk
 package players;
-
 
 import org.junit.Before;
 import org.junit.Test;
