@@ -17,7 +17,7 @@ public class Carrier implements Units {
         this.movementSpeed = getMovementSpeed();
         this.capacity = getCapacity();
         this.load = load;
-        this.playerId=playerId;
+        this.playerId = playerId;
     }
 
     public void setLoad(int load) {

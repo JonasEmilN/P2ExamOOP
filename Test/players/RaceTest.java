@@ -13,13 +13,13 @@ import static org.junit.Assert.*;
 public class RaceTest {
 
     @Before
-    public void arrayBefore01(){
+    public void arrayBefore01() {
         Race.addRaces();
     }
 
     @Test
     public void arrayRace01() {
-        assertEquals(7,Race.races.size());
+        assertEquals(7, Race.races.size());
     }
 
     @Test
@@ -29,13 +29,13 @@ public class RaceTest {
 
     @Test
     public void arrayRace03() {
-        assertEquals("The Federation of Sol",Race.races.get(3));
+        assertEquals("The Federation of Sol", Race.races.get(3));
     }
 
     @Test
     public void arrayRace04() {
         Race.races.remove(3);
-        assertEquals("Awesome People of 304A",Race.races.get(3));
+        assertEquals("Awesome People of 304A", Race.races.get(3));
     }
 
 }

@@ -26,38 +26,33 @@ public class StarSystem {
     public List<Planet> planetsInSystem = new ArrayList();
 
     void addPlanets(int plants, String plant1Name, int plant1resource,
-                             String plant2Name, int plant2resource,
-                             String plant3Name, int plant3resource) {
+                    String plant2Name, int plant2resource,
+                    String plant3Name, int plant3resource) {
 
         if (plants == 0) {
 
-        }
-        else if (plants == 1) {
-            planetsInSystem.add(new Planet(plant1Name,plant1resource));
-        }
-        else if (plants == 2) {
-            planetsInSystem.add(new Planet(plant1Name,plant1resource));
-            planetsInSystem.add(new Planet(plant2Name,plant2resource));
-        }
-        else if (plants == 3) {
-            planetsInSystem.add(new Planet(plant1Name,plant1resource));
-            planetsInSystem.add(new Planet(plant2Name,plant2resource));
-            planetsInSystem.add(new Planet(plant3Name,plant3resource));
-        }
-        else if (plants == 4) {
+        } else if (plants == 1) {
+            planetsInSystem.add(new Planet(plant1Name, plant1resource));
+        } else if (plants == 2) {
+            planetsInSystem.add(new Planet(plant1Name, plant1resource));
+            planetsInSystem.add(new Planet(plant2Name, plant2resource));
+        } else if (plants == 3) {
+            planetsInSystem.add(new Planet(plant1Name, plant1resource));
+            planetsInSystem.add(new Planet(plant2Name, plant2resource));
+            planetsInSystem.add(new Planet(plant3Name, plant3resource));
+        } else if (plants == 4) {
             Random rpn = new Random();
-            int p = rpn.nextInt(maxPlanet)+minPlant;
+            int p = rpn.nextInt(maxPlanet) + minPlant;
 
-            for (; p > 0 ; p++) {
-                planetsInSystem.add(new Planet("r",7));
+            for (; p > 0; p++) {
+                planetsInSystem.add(new Planet("r", 7));
             }
-        }
-        else {
+        } else {
             Random rpn = new Random();
-            int p = rpn.nextInt(maxPlanet)+minPlant;
+            int p = rpn.nextInt(maxPlanet) + minPlant;
 
-            for (; p > 0 ; p++) {
-                planetsInSystem.add(new Planet("r",7));
+            for (; p > 0; p++) {
+                planetsInSystem.add(new Planet("r", 7));
             }
 
         }
@@ -89,7 +84,7 @@ public class StarSystem {
         this.south = south;
         this.southWest = southWest;
         this.northWest = northWest;
-        addPlanets(plants,plant1Name,plant1resource,plant2Name,plant2resource,plant3Name,plant3resource);
+        addPlanets(plants, plant1Name, plant1resource, plant2Name, plant2resource, plant3Name, plant3resource);
 
     }
 

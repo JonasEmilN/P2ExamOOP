@@ -60,15 +60,13 @@ public class Planet {
         Planet.addPlanetNames();
         if (planets.contains(name)) {
             this.name = name;
-        }
-        else {
+        } else {
             this.name = planets.get(randomPlanet());
         }
 
-        if (resources > minResources-1 && resources < maxResources+1) {
+        if (resources > minResources - 1 && resources < maxResources + 1) {
             this.resources = resources;
-        }
-        else {
+        } else {
             this.resources = randomResources();
         }
 

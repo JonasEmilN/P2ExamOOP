@@ -39,8 +39,8 @@ public class GameSetup {
     public static void problem7() {
 
         //Players
-        Player.addPlayer(new Player(0,"Crassus","The Emirates of Hacan","Blue"));
-        Player.addPlayer(new Player(1,"Pompey","the Federation of Sol","Red"));
+        Player.addPlayer(new Player(0, "Crassus", "The Emirates of Hacan", "Blue"));
+        Player.addPlayer(new Player(1, "Pompey", "the Federation of Sol", "Red"));
 
         //Galaxy
         Galaxy.getStarSystemInGalaxy().add(new StarSystem("Center", 0, 6, 1, 2,
@@ -72,22 +72,22 @@ public class GameSetup {
                 0, "", 0, "", 0));
 
         //Blue player units
-        Galaxy.getStarSystemInGalaxy().get(0).addUnit("0",new Dreadnought(0));
-        Galaxy.getStarSystemInGalaxy().get(0).addUnit("1",new Dreadnought(0));
-        Galaxy.getStarSystemInGalaxy().get(0).addUnit("2",new Destroyer(0));
+        Galaxy.getStarSystemInGalaxy().get(0).addUnit("0", new Dreadnought(0));
+        Galaxy.getStarSystemInGalaxy().get(0).addUnit("1", new Dreadnought(0));
+        Galaxy.getStarSystemInGalaxy().get(0).addUnit("2", new Destroyer(0));
 
         //Red player units
-        Galaxy.getStarSystemInGalaxy().get(1).addUnit("0",new Cruiser(1));
-        Galaxy.getStarSystemInGalaxy().get(1).addUnit("1",new Cruiser(1));
-        Galaxy.getStarSystemInGalaxy().get(1).addUnit("2",new Carrier(1,0));
+        Galaxy.getStarSystemInGalaxy().get(1).addUnit("0", new Cruiser(1));
+        Galaxy.getStarSystemInGalaxy().get(1).addUnit("1", new Cruiser(1));
+        Galaxy.getStarSystemInGalaxy().get(1).addUnit("2", new Carrier(1, 0));
 
     }
 
     public static void problem12() {
 
         //Players
-        Player p1 = new Player(0,"Player1","The Emirates of Hacan","Blue");
-        Player p2 = new Player(1,"Player2","the Federation of Sol","Red");
+        Player p1 = new Player(0, "Player1", "The Emirates of Hacan", "Blue");
+        Player p2 = new Player(1, "Player2", "the Federation of Sol", "Red");
 
         //Galaxy
         Galaxy.getStarSystemInGalaxy().add(new StarSystem("Center", 0, 6, 1, 2,
@@ -114,14 +114,14 @@ public class GameSetup {
                 7, "", 7, "", 7));
 
         //Blue player units
-        Galaxy.getStarSystemInGalaxy().get(0).addUnit("0",new Dreadnought(0));
-        Galaxy.getStarSystemInGalaxy().get(0).addUnit("1",new Dreadnought(0));
-        Galaxy.getStarSystemInGalaxy().get(0).addUnit("2",new Destroyer(0));
+        Galaxy.getStarSystemInGalaxy().get(0).addUnit("0", new Dreadnought(0));
+        Galaxy.getStarSystemInGalaxy().get(0).addUnit("1", new Dreadnought(0));
+        Galaxy.getStarSystemInGalaxy().get(0).addUnit("2", new Destroyer(0));
 
         //Red player units
-        Galaxy.getStarSystemInGalaxy().get(1).addUnit("0",new Cruiser(1));
-        Galaxy.getStarSystemInGalaxy().get(1).addUnit("1",new Cruiser(1));
-        Galaxy.getStarSystemInGalaxy().get(1).addUnit("2",new Carrier(1,0));
+        Galaxy.getStarSystemInGalaxy().get(1).addUnit("0", new Cruiser(1));
+        Galaxy.getStarSystemInGalaxy().get(1).addUnit("1", new Cruiser(1));
+        Galaxy.getStarSystemInGalaxy().get(1).addUnit("2", new Carrier(1, 0));
 
     }
 

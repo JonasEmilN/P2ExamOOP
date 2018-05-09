@@ -10,7 +10,6 @@ public class GalaxyTest {
     public void problem7() {
 
 
-
     }
 
 

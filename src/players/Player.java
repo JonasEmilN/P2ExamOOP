@@ -15,12 +15,12 @@ public class Player {
     public Player(int id, String name, Object race, Object color) {
         this.id = id;
         this.name = name;
-        this.race =  (String) race;
+        this.race = (String) race;
         this.color = (String) color;
     }
 
     public static void addPlayer(Player player) {
-        players.add(players.size(),player);
+        players.add(players.size(), player);
     }
 
     public static List<Player> getPlayers() {

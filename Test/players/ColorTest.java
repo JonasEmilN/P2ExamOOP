@@ -10,13 +10,13 @@ import static org.junit.Assert.*;
 public class ColorTest {
 
     @Before
-    public void arrayBefore01(){
+    public void arrayBefore01() {
         Color.addColors();
     }
 
     @Test
     public void arrayColor01() {
-        assertEquals(7,Color.colors.size());
+        assertEquals(7, Color.colors.size());
     }
 
     @Test
@@ -26,13 +26,13 @@ public class ColorTest {
 
     @Test
     public void arrayColor03() {
-        assertEquals("Yellow",Color.colors.get(3));
+        assertEquals("Yellow", Color.colors.get(3));
     }
 
     @Test
     public void arrayColor04() {
         Color.colors.remove(3);
-        assertEquals("Pink",Color.colors.get(3));
+        assertEquals("Pink", Color.colors.get(3));
     }
 
 }

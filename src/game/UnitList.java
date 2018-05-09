@@ -14,7 +14,7 @@ public class UnitList {
         //Laver en Arraylist af Units in the Galaxy
         List<Units> allUnits = new ArrayList<>();
 
-        for (int i = 0; i < Galaxy.getStarSystemInGalaxy().size() ; i++) {
+        for (int i = 0; i < Galaxy.getStarSystemInGalaxy().size(); i++) {
             allUnits.addAll(Galaxy.getStarSystemInGalaxy().get(i).getUnitsInSystem().values());
         }
 

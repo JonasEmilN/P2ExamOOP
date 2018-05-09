@@ -29,10 +29,10 @@ public class LegalGalaxy {
 
         //Check for Same planet
         Set<Planet> check = new HashSet<>();
-       int control = 0;
+        int control = 0;
 
-        for (int i = 0; i < Galaxy.getStarSystemInGalaxy().size() ; i++) {
-            for (int j = 0; j < Galaxy.getStarSystemInGalaxy().get(i).planetsInSystem.size() ; j++) {
+        for (int i = 0; i < Galaxy.getStarSystemInGalaxy().size(); i++) {
+            for (int j = 0; j < Galaxy.getStarSystemInGalaxy().get(i).planetsInSystem.size(); j++) {
                 check.add(Galaxy.getStarSystemInGalaxy().get(i).planetsInSystem.get(j));
                 control++;
             }
@@ -44,7 +44,7 @@ public class LegalGalaxy {
 
         //StarSystem max 3 Planets
         control = 0;
-        for (int i = 0; i < Galaxy.getStarSystemInGalaxy().size() ; i++) {
+        for (int i = 0; i < Galaxy.getStarSystemInGalaxy().size(); i++) {
             if (Galaxy.getStarSystemInGalaxy().get(i).planetsInSystem.size() < 4) {
                 control++;
             }
@@ -58,7 +58,7 @@ public class LegalGalaxy {
         control = 0;
 
         //For loop for all StarSystems
-        for (int k = 0; k < Galaxy.getStarSystemInGalaxy().size() ; k++) {
+        for (int k = 0; k < Galaxy.getStarSystemInGalaxy().size(); k++) {
 
             if (Galaxy.getStarSystemInGalaxy().get(k).north == Galaxy.getStarSystemInGalaxy().get(Galaxy.getStarSystemInGalaxy().get(k).north).placement) {
                 control++;
@@ -84,14 +84,13 @@ public class LegalGalaxy {
             }
         }
 
-        if (control == Galaxy.getStarSystemInGalaxy().size()*6) {
+        if (control == Galaxy.getStarSystemInGalaxy().size() * 6) {
             trueOrFalsh++;
         }
 
         if (trueOrFalsh == 5) {
             return true;
-        }
-        else {
+        } else {
             return false;
         }
     }
