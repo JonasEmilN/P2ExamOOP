@@ -10,6 +10,7 @@ public class Player {
     public String name;
     public static String race;
     static String color;
+    static List<Player> players = new ArrayList<>();
 
     public Player(int id, String name, Object race, Object color) {
         this.id = id;
@@ -17,6 +18,15 @@ public class Player {
         this.race =  (String) race;
         this.color = (String) color;
     }
+
+    public static void addPlayer(Player player) {
+        players.add(players.size(),player);
+    }
+
+    public static List<Player> getPlayers() {
+        return players;
+    }
+
 
     public int getId() {
         return id;

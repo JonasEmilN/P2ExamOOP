@@ -39,8 +39,8 @@ public class GameSetup {
     public static void problem7() {
 
         //Players
-        Player p1 = new Player(0,"Crassus","The Emirates of Hacan","Blue");
-        Player p2 = new Player(1,"Pompey","the Federation of Sol","Red");
+        Player.addPlayer(new Player(0,"Crassus","The Emirates of Hacan","Blue"));
+        Player.addPlayer(new Player(1,"Pompey","the Federation of Sol","Red"));
 
         //Galaxy
         Galaxy.getStarSystemInGalaxy().add(new StarSystem("Center", 0, 6, 1, 2,

@@ -9,7 +9,7 @@ public class Color {
 
     static final List<String> colors = new ArrayList<>();
 
-    public static void addColors() {
+    static void addColors() {
 
         colors.add("Red");
         colors.add("Blue");
